@@ -19,19 +19,22 @@
   --border:#2a2a38;
   --card:#141420;
 }
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+  font-size:20px; /* %125 base scale (16px -> 20px) */
+}
 body{
   background:var(--bg);
   color:var(--text);
   font-family:'DM Sans',sans-serif;
-  font-size:16px;
+  font-size:1rem;
   line-height:1.7;
   overflow-x:hidden;
   cursor:none;
 }
 /* Custom cursor */
 .cursor{
-  width:12px;height:12px;
+  width:15px;height:15px; /* 12px -> 15px */
   background:var(--accent);
   border-radius:50%;
   position:fixed;top:0;left:0;
@@ -40,7 +43,7 @@ body{
   mix-blend-mode:difference;
   transition:transform .15s ease,width .2s,height .2s;
 }
-.cursor.big{width:40px;height:40px;transform:translate(-14px,-14px)}
+.cursor.big{width:50px;height:50px;transform:translate(-17px,-17px)} /* 40px -> 50px */
 /* Noise overlay */
 body::before{
   content:'';
@@ -99,10 +102,10 @@ nav{
   background-image:
     linear-gradient(rgba(200,241,53,.04) 1px,transparent 1px),
     linear-gradient(90deg,rgba(200,241,53,.04) 1px,transparent 1px);
-  background-size:60px 60px;
+  background-size:75px 75px; /* 60px -> 75px */
   mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%);
 }
-.hero-content{max-width:900px;position:relative;z-index:2}
+.hero-content{max-width:1125px;position:relative;z-index:2} /* 900px -> 1125px */
 .hero-tag{
   display:inline-block;
   font-family:'Space Mono',monospace;
@@ -132,7 +135,7 @@ h1.hero-name span{color:var(--accent)}
 .hero-desc{
   font-size:1.1rem;
   color:#b0b0c0;
-  max-width:500px;
+  max-width:625px; /* 500px -> 625px */
   margin-bottom:3rem;
 }
 .hero-stats{
@@ -179,8 +182,8 @@ h1.hero-name span{color:var(--accent)}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
 /* BIG CIRCLE BG */
 .hero-orb{
-  position:absolute;right:-200px;top:50%;transform:translateY(-50%);
-  width:600px;height:600px;
+  position:absolute;right:-250px;top:50%;transform:translateY(-50%); /* -200px -> -250px */
+  width:750px;height:750px; /* 600px -> 750px */
   border-radius:50%;
   background:radial-gradient(circle,rgba(123,94,167,.15) 0%,transparent 70%);
   pointer-events:none;
@@ -197,7 +200,7 @@ section{padding:6rem 4rem}
   display:flex;align-items:center;gap:.8rem;
 }
 .section-label::after{
-  content:'';flex:1;height:1px;background:var(--border);max-width:200px;
+  content:'';flex:1;height:1px;background:var(--border);max-width:250px; /* 200px -> 250px */
 }
 h2.section-title{
   font-family:'Bebas Neue',sans-serif;
@@ -210,7 +213,7 @@ h2.section-title{
 #skills{background:var(--bg2)}
 .skills-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(325px,1fr)); /* 260px -> 325px */
   gap:1.5rem;
 }
 .skill-card{
@@ -241,7 +244,7 @@ h2.section-title{
   display:flex;gap:.3rem;margin-bottom:.75rem;
 }
 .skill-dot{
-  width:8px;height:8px;border-radius:50%;
+  width:10px;height:10px;border-radius:50%; /* 8px -> 10px */
   background:var(--border);
 }
 .skill-dot.filled{background:var(--accent)}
@@ -262,7 +265,7 @@ h2.section-title{
 .exp-item::before{
   content:'';
   position:absolute;left:-2rem;top:.5rem;
-  width:10px;height:10px;
+  width:12px;height:12px; /* 10px -> 12px */
   border-radius:50%;
   background:var(--accent);
   border:2px solid var(--bg);
@@ -300,13 +303,13 @@ h2.section-title{
 /* PROJECTS */
 #projects{background:var(--bg2)}
 .projects-intro{
-  max-width:700px;
+  max-width:875px; /* 700px -> 875px */
   color:#b0b0c0;
   margin-bottom:3rem;
 }
 .projects-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(375px,1fr)); /* 300px -> 375px */
   gap:1.5rem;
   margin-bottom:3rem;
 }
@@ -356,10 +359,10 @@ h2.section-title{
 
 /* GAME JAM SECTION */
 #jams{padding:6rem 4rem}
-.jams-intro{color:#b0b0c0;max-width:700px;margin-bottom:3rem}
+.jams-intro{color:#b0b0c0;max-width:875px;margin-bottom:3rem} /* 700px -> 875px */
 .jams-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  grid-template-columns:repeat(auto-fill,minmax(350px,1fr)); /* 280px -> 350px */
   gap:1rem;
 }
 .jam-card{
@@ -425,7 +428,7 @@ h2.section-title{
   gap:4rem;
   align-items:start;
 }
-@media(max-width:700px){.contact-inner{grid-template-columns:1fr}}
+@media(max-width:875px){.contact-inner{grid-template-columns:1fr}} /* 700px -> 875px */
 .contact-info h2{margin-bottom:1rem}
 .contact-info p{color:#b0b0c0;margin-bottom:2rem}
 .contact-links{display:flex;flex-direction:column;gap:1rem}
@@ -466,7 +469,7 @@ h2.section-title{
   resize:none;
 }
 .form-input:focus,.form-textarea:focus{border-color:var(--accent)}
-.form-textarea{height:140px}
+.form-textarea{height:175px} /* 140px -> 175px */
 .form-submit{
   background:var(--accent);
   border:none;
@@ -500,7 +503,7 @@ footer{
 }
 .modal-overlay.open{display:block}
 .modal-content{
-  max-width:860px;
+  max-width:1075px; /* 860px -> 1075px */
   margin:0 auto;
   padding:6rem 3rem 4rem;
   animation:slideUp .4s ease;
@@ -587,7 +590,7 @@ footer{
 .medal-part{background:rgba(123,94,167,.1);border:1px solid var(--accent2);color:var(--accent2)}
 
 /* Responsive */
-@media(max-width:768px){
+@media(max-width:960px){ /* 768px -> 960px */
   nav{padding:1rem 1.5rem}
   #hero,section,#jams,#contact{padding-left:1.5rem;padding-right:1.5rem}
   .hero-stats{gap:1.5rem}
@@ -841,8 +844,8 @@ footer{
 // Custom cursor
 const cursor = document.getElementById('cursor');
 document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX - 6 + 'px';
-  cursor.style.top = e.clientY - 6 + 'px';
+  cursor.style.left = e.clientX - 7 + 'px'; // Adjusted for 125% scale
+  cursor.style.top = e.clientY - 7 + 'px';
 });
 document.querySelectorAll('a,button,.jam-card,.btn').forEach(el => {
   el.addEventListener('mouseenter', () => cursor.classList.add('big'));
@@ -876,7 +879,7 @@ function toggleLang() {
   }
 }
 
-// Game jam data updated with fixes (No numbers, No YZTA in title, Story & Role updates)
+// Game jam data
 const jams = [
   {
     id:'kutahya24',
