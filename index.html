@@ -119,7 +119,7 @@ nav{
 }
 h1.hero-name{
   font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(4rem,12vw,9rem);
+  font-size:clamp(3.5rem,12vw,9rem);
   line-height:.9;
   letter-spacing:.02em;
   margin-bottom:1.5rem;
@@ -213,7 +213,7 @@ h2.section-title{
 #skills{background:var(--bg2)}
 .skills-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(325px,1fr)); /* 260px -> 325px */
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); /* Optimizasyon: Mobil taşma engellendi */
   gap:1.5rem;
 }
 .skill-card{
@@ -309,7 +309,7 @@ h2.section-title{
 }
 .projects-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(375px,1fr)); /* 300px -> 375px */
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); /* Optimizasyon: Mobil taşma engellendi */
   gap:1.5rem;
   margin-bottom:3rem;
 }
@@ -362,7 +362,7 @@ h2.section-title{
 .jams-intro{color:#b0b0c0;max-width:875px;margin-bottom:3rem} /* 700px -> 875px */
 .jams-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(350px,1fr)); /* 280px -> 350px */
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); /* Optimizasyon: Mobil taşma engellendi */
   gap:1rem;
 }
 .jam-card{
@@ -532,7 +532,7 @@ footer{
 }
 .modal-title{
   font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(3rem,8vw,6rem);
+  font-size:clamp(2.5rem,8vw,6rem);
   letter-spacing:.03em;
   line-height:.95;
   margin-bottom:1rem;
@@ -589,13 +589,54 @@ footer{
 .medal-bronze{background:rgba(205,127,50,.1);border:1px solid #cd7f32;color:#cd7f32}
 .medal-part{background:rgba(123,94,167,.1);border:1px solid var(--accent2);color:var(--accent2)}
 
-/* Responsive */
-@media(max-width:960px){ /* 768px -> 960px */
+/* Gelişmiş Responsive Katmanı */
+@media(max-width:960px){ 
+  html{font-size:18px;} /* Tüm rem birimleri tablet boyutuna göre aşağı çekildi */
   nav{padding:1rem 1.5rem}
   #hero,section,#jams,#contact{padding-left:1.5rem;padding-right:1.5rem}
-  .hero-stats{gap:1.5rem}
+  .hero-stats{gap:2rem}
   footer{flex-direction:column;gap:.5rem;text-align:center}
   .modal-content{padding:5rem 1.5rem 3rem}
+}
+
+@media(max-width:640px){
+  html{font-size:15px;} /* Mobil için ideal rem ölçeği */
+  nav{
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+  .nav-links{
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #hero{
+    padding-top: 11rem; /* Menü dikeyde genişlediği için üst boşluk artırıldı */
+    min-height: auto;
+  }
+  .hero-stats{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .hero-links{
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-links .btn{
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-orb{
+    display: none; /* Mobilde taşmayı önlemek ve performansı artırmak için gizlendi */
+  }
+}
+
+/* Dokunmatik Ekranlarda Custom Cursor'ı Kapatma */
+@media (pointer: coarse), (max-width: 1024px) {
+  .cursor { display: none !important; }
+  body, a, button, .btn, .jam-card, .project-card { cursor: auto !important; }
 }
 </style>
 </head>
@@ -714,7 +755,7 @@ footer{
       <div class="exp-company" data-tr="Vazos Üyesi / Game Developer" data-en="Vazos Member / Game Developer">Vazos Üyesi / Game Developer</div>
       <ul class="exp-bullets">
         <li data-tr="15'ten fazla yerel ve global Game Jam'e katılım, 6 farklı derece kazanımı" data-en="Participation in over 15 local and global Game Jams, achieving 6 different ranks">15'ten fazla yerel ve global Game Jam'e katılım, 6 farklı derece kazanımı</li>
-        <li data-tr="Oyun dünyasıyla entegre NFC kartlar ve 3D anahtarlık gibi inovatif product prototipleme" data-en="Prototyping innovative products like NFC cards and 3D keychains integrated with the gaming world">Oyun dünyasıyla entegre NFC kartlar ve 3D anahtarlık gibi inovatif ürün prototipleme</li>
+        <li data-tr="Oyun dünyasıyla entegre NFC kartlar ve 3D anahtarlık gibi inovatif ürün prototipleme" data-en="Prototyping innovative products like NFC cards and 3D keychains integrated with the gaming world">Oyun dünyasıyla entegre NFC kartlar ve 3D anahtarlık gibi inovatif ürün prototipleme</li>
         <li data-tr="YouTube üzerinden topluluk için oyun geliştirme içerikleri üretimi" data-en="Producing game development content for the community via YouTube">YouTube üzerinden topluluk için oyun geliştirme içerikleri üretimi</li>
       </ul>
     </div>
