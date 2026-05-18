@@ -213,7 +213,7 @@ h2.section-title{
 #skills{background:var(--bg2)}
 .skills-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); /* Optimizasyon: Mobil taşma engellendi */
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:1.5rem;
 }
 .skill-card{
@@ -309,7 +309,7 @@ h2.section-title{
 }
 .projects-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); /* Optimizasyon: Mobil taşma engellendi */
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:1.5rem;
   margin-bottom:3rem;
 }
@@ -362,7 +362,7 @@ h2.section-title{
 .jams-intro{color:#b0b0c0;max-width:875px;margin-bottom:3rem} /* 700px -> 875px */
 .jams-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); /* Optimizasyon: Mobil taşma engellendi */
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
   gap:1rem;
 }
 .jam-card{
@@ -602,9 +602,11 @@ footer{
 @media(max-width:640px){
   html{font-size:15px;} /* Mobil için ideal rem ölçeği */
   nav{
+    position: absolute; /* Fix: Artık ekranın üstünde çakılı kalmayacak, sayfa kayınca yukarı gidecek */
     flex-direction: column;
     gap: 0.8rem;
     padding: 1rem;
+    background: rgba(10,10,15,.95);
   }
   .nav-links{
     gap: 1rem;
@@ -1084,7 +1086,7 @@ const jams = [
     date:'30 Ocak 2026', date_en: 'Jan 30, 2026',
     rank:0,
     game:'',
-    desc:'Herkesin maskeyle doğduğu bir toplumda, sistemin dışında kalan "maskesizler" için kaçak üretim yapıyoruz. Hem otoritenin baskısından kaçıp hem de toplumdan dışlananlara umut olmaya çalıştığımız distopik bir yapım.',
+    desc:'Herkesin maskeyle doğzada bir toplumda, sistemin dışında kalan "maskesizler" için kaçak üretim yapıyoruz. Hem otoritenin baskısından kaçıp hem de toplumdan dışlananlara umut olmaya çalıştığımız distopik bir yapım.',
     desc_en:'In a society where everyone is born with a mask, we do illegal production for the "unmasked" who are left outside the system. A dystopian game where we try to escape the authority\'s oppression and be a hope for the outcasts.',
     roles:['Level Design','Oyun Döngüsü','Hikaye','Mekanik Geliştirme'],
     roles_en:['Level Design','Game Loop','Story','Mechanics Dev'],
