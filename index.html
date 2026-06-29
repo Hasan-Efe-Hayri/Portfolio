@@ -21,7 +21,7 @@
 }
 html{
   scroll-behavior:smooth;
-  font-size:18px; /* %10 Küçültülmüş temel ölçek (20px'ten 18px'e düşürüldü) */
+  font-size:16px; /* %80 yerel ölçek (orijinal 20px'ten 16px'e düşürüldü) */
 }
 body{
   background:var(--bg);
@@ -34,7 +34,7 @@ body{
 }
 /* Custom cursor */
 .cursor{
-  width:13.5px;height:13.5px; /* %10 küçültüldü */
+  width:12px;height:12px; /* %80 ölçeklendi */
   background:var(--accent);
   border-radius:50%;
   position:fixed;top:0;left:0;
@@ -43,7 +43,7 @@ body{
   mix-blend-mode:difference;
   transition:transform .15s ease,width .2s,height .2s;
 }
-.cursor.big{width:45px;height:45px;transform:translate(-15px,-15px)} /* %10 küçültüldü */
+.cursor.big{width:40px;height:40px;transform:translate(-14px,-14px)} /* Merkez hizalaması %80'e göre eşitlendi */
 /* Noise overlay */
 body::before{
   content:'';
@@ -102,10 +102,10 @@ nav{
   background-image:
     linear-gradient(rgba(200,241,53,.04) 1px,transparent 1px),
     linear-gradient(90deg,rgba(200,241,53,.04) 1px,transparent 1px);
-  background-size:67.5px 67.5px; /* %10 küçültüldü */
+  background-size:60px 60px; /* %80 ölçeklendi */
   mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%);
 }
-.hero-content{max-width:1012.5px;position:relative;z-index:2} /* %10 küçültüldü */
+.hero-content{max-width:900px;position:relative;z-index:2} /* %80 ölçeklendi */
 .hero-tag{
   display:inline-block;
   font-family:'Space Mono',monospace;
@@ -135,7 +135,7 @@ h1.hero-name span{color:var(--accent)}
 .hero-desc{
   font-size:1.1rem;
   color:#b0b0c0;
-  max-width:562.5px; /* %10 küçültüldü */
+  max-width:500px; /* %80 ölçeklendi */
   margin-bottom:3rem;
 }
 .hero-stats{
@@ -181,8 +181,8 @@ h1.hero-name span{color:var(--accent)}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
 /* BIG CIRCLE BG */
 .hero-orb{
-  position:absolute;right:-250px;top:50%;transform:translateY(-50%);
-  width:750px;height:750px;
+  position:absolute;right:-200px;top:50%;transform:translateY(-50%); /* %80 ölçeklendi */
+  width:600px;height:600px; /* %80 ölçeklendi */
   border-radius:50%;
   background:radial-gradient(circle,rgba(123,94,167,.15) 0%,transparent 70%);
   pointer-events:none;
@@ -199,7 +199,7 @@ section{padding:6rem 4rem}
   display:flex;align-items:center;gap:.8rem;
 }
 .section-label::after{
-  content:'';flex:1;height:1px;background:var(--border);max-width:225px; /* %10 küçültüldü */
+  content:'';flex:1;height:1px;background:var(--border);max-width:200px; /* %80 ölçeklendi */
 }
 h2.section-title{
   font-family:'Bebas Neue',sans-serif;
@@ -212,7 +212,7 @@ h2.section-title{
 #skills{background:var(--bg2)}
 .skills-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(252px,1fr)); /* %10 küçültüldü */
+  grid-template-columns:repeat(auto-fit,minmax(224px,1fr)); /* %80 ölçeklendi */
   gap:1.5rem;
 }
 .skill-card{
@@ -243,7 +243,7 @@ h2.section-title{
   display:flex;gap:.3rem;margin-bottom:.75rem;
 }
 .skill-dot{
-  width:9px;height:9px;border-radius:50%; /* %10 küçültüldü */
+  width:8px;height:8px;border-radius:50%; /* %80 ölçeklendi */
   background:var(--border);
 }
 .skill-dot.filled{background:var(--accent)}
@@ -264,7 +264,7 @@ h2.section-title{
 .exp-item::before{
   content:'';
   position:absolute;left:-2rem;top:.5rem;
-  width:11px;height:11px; /* %10 küçültüldü */
+  width:10px;height:10px; /* %80 ölçeklendi */
   border-radius:50%;
   background:var(--accent);
   border:2px solid var(--bg);
@@ -302,13 +302,13 @@ h2.section-title{
 /* PROJECTS */
 #projects{background:var(--bg2)}
 .projects-intro{
-  max-width:787.5px; /* %10 küçültüldü */
+  max-width:700px; /* %80 ölçeklendi */
   color:#b0b0c0;
   margin-bottom:3rem;
 }
 .projects-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(252px,1fr)); /* %10 küçültüldü */
+  grid-template-columns:repeat(auto-fit,minmax(224px,1fr)); /* %80 ölçeklendi */
   gap:1.5rem;
   margin-bottom:3rem;
 }
@@ -329,7 +329,7 @@ h2.section-title{
 .project-card:hover{
   border-color:var(--accent);
   transform:translateY(-6px);
-  box-shadow:0 18px 36px rgba(0,0,0,.5);
+  box-shadow:0 20px 40px rgba(0,0,0,.5);
 }
 .project-type{
   font-family:'Space Mono',monospace;
@@ -358,10 +358,10 @@ h2.section-title{
 
 /* GAME JAM SECTION */
 #jams{padding:6rem 4rem}
-.jams-intro{color:#b0b0c0;max-width:787.5px;margin-bottom:3rem} /* %10 küçültüldü */
+.jams-intro{color:#b0b0c0;max-width:700px;margin-bottom:3rem} /* %80 ölçeklendi */
 .jams-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(252px,1fr)); /* %10 küçültüldü */
+  grid-template-columns:repeat(auto-fill,minmax(224px,1fr)); /* %80 ölçeklendi */
   gap:1rem;
 }
 .jam-card{
@@ -427,7 +427,7 @@ h2.section-title{
   gap:4rem;
   align-items:start;
 }
-@media(max-width:875px){.contact-inner{grid-template-columns:1fr}}
+@media(max-width:700px){.contact-inner{grid-template-columns:1fr}} /* %80 ölçeklendi */
 .contact-info h2{margin-bottom:1rem}
 .contact-info p{color:#b0b0c0;margin-bottom:2rem}
 .contact-links{display:flex;flex-direction:column;gap:1rem}
@@ -468,7 +468,7 @@ h2.section-title{
   resize:none;
 }
 .form-input:focus,.form-textarea:focus{border-color:var(--accent)}
-.form-textarea{height:157.5px;} /* %10 küçültüldü */
+.form-textarea{height:140px} /* %80 ölçeklendi */
 .form-submit{
   background:var(--accent);
   border:none;
@@ -502,7 +502,7 @@ footer{
 }
 .modal-overlay.open{display:block}
 .modal-content{
-  max-width:967.5px; /* %10 küçültüldü */
+  max-width:860px; /* %80 ölçeklendi */
   margin:0 auto;
   padding:6rem 3rem 4rem;
   animation:slideUp .4s ease;
@@ -589,8 +589,8 @@ footer{
 .medal-part{background:rgba(123,94,167,.1);border:1px solid var(--accent2);color:var(--accent2)}
 
 /* Gelişmiş Responsive Katmanı */
-@media(max-width:960px){ 
-  html{font-size:16.2px;} /* Orantılı küçültüldü */
+@media(max-width:768px){  /* %80 ölçeklendi */
+  html{font-size:14.4px;} 
   nav{padding:1rem 1.5rem}
   #hero,section,#jams,#contact{padding-left:1.5rem;padding-right:1.5rem}
   .hero-stats{gap:2rem}
@@ -598,8 +598,8 @@ footer{
   .modal-content{padding:5rem 1.5rem 3rem}
 }
 
-@media(max-width:640px){
-  html{font-size:13.5px;} /* Orantılı küçültüldü */
+@media(max-width:512px){ /* %80 ölçeklendi */
+  html{font-size:12px;} 
   nav{
     position: relative;
     top: auto; left: auto; right: auto;
@@ -713,7 +713,7 @@ footer{
       <div class="skill-level">
         <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot"></div><div class="skill-dot"></div>
       </div>
-      <div class="skill-desc" data-tr="Bölüm tasarımı, atmosfer kurgusuและ oyun akışı optimizasyonu." data-en="Level design, atmosphere creation, and game flow optimization.">Bölüm tasarımı, atmosfer kurgusu ve oyun akışı optimizasyonu.</div>
+      <div class="skill-desc" data-tr="Bölüm tasarımı, atmosfer kurgusu ve oyun akışı optimizasyonu." data-en="Level design, atmosphere creation, and game flow optimization.">Bölüm tasarımı, atmosfer kurgusu ve oyun akışı optimizasyonu.</div>
     </div>
     <div class="skill-card">
       <div class="skill-icon">🖥</div>
@@ -808,7 +808,7 @@ footer{
   <div class="contact-inner">
     <div class="contact-info">
       <h2 class="section-title" data-tr="BİRLİKTE<br>YAPALIM" data-en="LET'S BUILD<br>TOGETHER">BİRLİKTE<br>YAPALIM</h2>
-      <p data-tr="Proje fikrin mi var? Ekibine oyun geliştiricisi mi arıyorsun? Vazos grubuna veya bana dair sormak istediklerin mi var? — her durumda ulaşabilirsin." data-en="Got a project idea? Looking for a game developer for your team? Or just want to say hi? — feel free to reach out anytime.">Proje fikrin mi var? Ekibine oyun geliştiricisi mi arıyorsun? Veya sadece merhaba demek mi istiyorsun? — her durumda ulaşabilirsin.</p>
+      <p data-tr="Proje fikrin mi var? Ekibine oyun geliştiricisi mi arıyorsun? Veya sadece merhaba demek mi istiyorsun? — her durumda ulaşabilirsin." data-en="Got a project idea? Looking for a game developer for your team? Or just want to say hi? — feel free to reach out anytime.">Proje fikrin mi var? Ekibine oyun geliştiricisi mi arıyorsun? Veya sadece merhaba demek mi istiyorsun? — her durumda ulaşabilirsin.</p>
       <div class="contact-links">
         <a href="mailto:efehayri2005@gmail.com" class="contact-link">
           <span class="contact-link-icon">✉</span>
@@ -866,7 +866,7 @@ footer{
 <script>
 const cursor = document.getElementById('cursor');
 document.addEventListener('mousemove', e => {
-  /* Koordinat eşleştirmesi transformsuz yapıyla %100 uyumlu hale getirildi */
+  /* 12px çapa göre fare ucu tam merkeze hizalandı */
   cursor.style.left = e.clientX - 6 + 'px';
   cursor.style.top = e.clientY - 6 + 'px';
 });
