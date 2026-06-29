@@ -21,7 +21,7 @@
 }
 html{
   scroll-behavior:smooth;
-  font-size:20px; /* %125 base scale (16px -> 20px) */
+  font-size:20px;
 }
 body{
   background:var(--bg);
@@ -34,7 +34,7 @@ body{
 }
 /* Custom cursor */
 .cursor{
-  width:15px;height:15px; /* 12px -> 15px */
+  width:15px;height:15px;
   background:var(--accent);
   border-radius:50%;
   position:fixed;top:0;left:0;
@@ -43,7 +43,7 @@ body{
   mix-blend-mode:difference;
   transition:transform .15s ease,width .2s,height .2s;
 }
-.cursor.big{width:50px;height:50px;transform:translate(-17px,-17px)} /* 40px -> 50px */
+.cursor.big{width:50px;height:50px;transform:translate(-17px,-17px)}
 /* Noise overlay */
 body::before{
   content:'';
@@ -102,10 +102,10 @@ nav{
   background-image:
     linear-gradient(rgba(200,241,53,.04) 1px,transparent 1px),
     linear-gradient(90deg,rgba(200,241,53,.04) 1px,transparent 1px);
-  background-size:75px 75px; /* 60px -> 75px */
+  background-size:75px 75px;
   mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%);
 }
-.hero-content{max-width:1125px;position:relative;z-index:2} /* 900px -> 1125px */
+.hero-content{max-width:1125px;position:relative;z-index:2}
 .hero-tag{
   display:inline-block;
   font-family:'Space Mono',monospace;
@@ -135,14 +135,13 @@ h1.hero-name span{color:var(--accent)}
 .hero-desc{
   font-size:1.1rem;
   color:#b0b0c0;
-  max-width:625px; /* 500px -> 625px */
+  max-width:625px;
   margin-bottom:3rem;
 }
 .hero-stats{
   display:flex;gap:3rem;
   margin-bottom:3rem;
 }
-.stat-item{}
 .stat-num{
   font-family:'Bebas Neue',sans-serif;
   font-size:2.5rem;
@@ -182,8 +181,8 @@ h1.hero-name span{color:var(--accent)}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
 /* BIG CIRCLE BG */
 .hero-orb{
-  position:absolute;right:-250px;top:50%;transform:translateY(-50%); /* -200px -> -250px */
-  width:750px;height:750px; /* 600px -> 750px */
+  position:absolute;right:-250px;top:50%;transform:translateY(-50%);
+  width:750px;height:750px;
   border-radius:50%;
   background:radial-gradient(circle,rgba(123,94,167,.15) 0%,transparent 70%);
   pointer-events:none;
@@ -200,7 +199,7 @@ section{padding:6rem 4rem}
   display:flex;align-items:center;gap:.8rem;
 }
 .section-label::after{
-  content:'';flex:1;height:1px;background:var(--border);max-width:250px; /* 200px -> 250px */
+  content:'';flex:1;height:1px;background:var(--border);max-width:250px;
 }
 h2.section-title{
   font-family:'Bebas Neue',sans-serif;
@@ -244,7 +243,7 @@ h2.section-title{
   display:flex;gap:.3rem;margin-bottom:.75rem;
 }
 .skill-dot{
-  width:10px;height:10px;border-radius:50%; /* 8px -> 10px */
+  width:10px;height:10px;border-radius:50%;
   background:var(--border);
 }
 .skill-dot.filled{background:var(--accent)}
@@ -265,7 +264,7 @@ h2.section-title{
 .exp-item::before{
   content:'';
   position:absolute;left:-2rem;top:.5rem;
-  width:12px;height:12px; /* 10px -> 12px */
+  width:12px;height:12px;
   border-radius:50%;
   background:var(--accent);
   border:2px solid var(--bg);
@@ -303,7 +302,7 @@ h2.section-title{
 /* PROJECTS */
 #projects{background:var(--bg2)}
 .projects-intro{
-  max-width:875px; /* 700px -> 875px */
+  max-width:875px;
   color:#b0b0c0;
   margin-bottom:3rem;
 }
@@ -359,7 +358,7 @@ h2.section-title{
 
 /* GAME JAM SECTION */
 #jams{padding:6rem 4rem}
-.jams-intro{color:#b0b0c0;max-width:875px;margin-bottom:3rem} /* 700px -> 875px */
+.jams-intro{color:#b0b0c0;max-width:875px;margin-bottom:3rem}
 .jams-grid{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
@@ -428,7 +427,7 @@ h2.section-title{
   gap:4rem;
   align-items:start;
 }
-@media(max-width:875px){.contact-inner{grid-template-columns:1fr}} /* 700px -> 875px */
+@media(max-width:875px){.contact-inner{grid-template-columns:1fr}}
 .contact-info h2{margin-bottom:1rem}
 .contact-info p{color:#b0b0c0;margin-bottom:2rem}
 .contact-links{display:flex;flex-direction:column;gap:1rem}
@@ -469,7 +468,7 @@ h2.section-title{
   resize:none;
 }
 .form-input:focus,.form-textarea:focus{border-color:var(--accent)}
-.form-textarea{height:175px} /* 140px -> 175px */
+.form-textarea{height:175px}
 .form-submit{
   background:var(--accent);
   border:none;
@@ -503,7 +502,7 @@ footer{
 }
 .modal-overlay.open{display:block}
 .modal-content{
-  max-width:1075px; /* 860px -> 1075px */
+  max-width:1075px;
   margin:0 auto;
   padding:6rem 3rem 4rem;
   animation:slideUp .4s ease;
@@ -591,7 +590,7 @@ footer{
 
 /* Gelişmiş Responsive Katmanı */
 @media(max-width:960px){ 
-  html{font-size:18px;} /* Tüm rem birimleri tablet boyutuna göre aşağı çekildi */
+  html{font-size:18px;} 
   nav{padding:1rem 1.5rem}
   #hero,section,#jams,#contact{padding-left:1.5rem;padding-right:1.5rem}
   .hero-stats{gap:2rem}
@@ -600,14 +599,14 @@ footer{
 }
 
 @media(max-width:640px){
-  html{font-size:15px;} /* Mobil için ideal rem ölçeği */
+  html{font-size:15px;}
   nav{
-    position: relative; /* Fix: Normal döküman akışına alındı, böylece altındaki elementleri aşağı itecek */
+    position: relative;
     top: auto; left: auto; right: auto;
     flex-direction: column;
     gap: 0.8rem;
     padding: 1.5rem 1rem;
-    background: var(--bg2); /* Boşluk hissini silmek için solid arka plan */
+    background: var(--bg2);
   }
   .nav-links{
     gap: 1rem;
@@ -615,7 +614,7 @@ footer{
     justify-content: center;
   }
   #hero{
-    padding-top: 3rem; /* Nav artık üstünde yer kapladığı için ekstra büyük paddinge gerek kalmadı */
+    padding-top: 3rem;
     min-height: auto;
   }
   .hero-stats{
@@ -632,11 +631,10 @@ footer{
     justify-content: center;
   }
   .hero-orb{
-    display: none; /* Mobilde taşmayı önlemek ve performansı artırmak için gizlendi */
+    display: none;
   }
 }
 
-/* Dokunmatik Ekranlarda Custom Cursor'ı Kapatma */
 @media (pointer: coarse), (max-width: 1024px) {
   .cursor { display: none !important; }
   body, a, button, .btn, .jam-card, .project-card { cursor: auto !important; }
@@ -647,7 +645,6 @@ footer{
 
 <div class="cursor" id="cursor"></div>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">HEH</div>
   <ul class="nav-links">
@@ -660,7 +657,6 @@ footer{
   <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-grid"></div>
   <div class="hero-orb"></div>
@@ -691,7 +687,6 @@ footer{
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="section-label" data-tr="01 — Yetenekler" data-en="01 — Skills">01 — Yetenekler</div>
   <h2 class="section-title" data-tr="TEKNİK ALTYAPI" data-en="TECHNICAL BACKGROUND">TEKNİK ALTYAPI</h2>
@@ -740,14 +735,13 @@ footer{
       <div class="skill-icon">🎵</div>
       <div class="skill-name">Sound Design</div>
       <div class="skill-level">
-        <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot"></div><div class="skill-dot"></div>
+        <div class="skill-dot filled"></div><div class="skill-dot"></div><div class="skill-dot"></div><div class="skill-dot"></div><div class="skill-dot"></div>
       </div>
       <div class="skill-desc" data-tr="MR. Mole, Handle'nt, Night of Sleepwalker ve InFrame projelerinde ses tasarımı." data-en="Sound design in MR. Mole, Handle'nt, Night of Sleepwalker, and InFrame projects.">MR. Mole, Handle'nt, Night of Sleepwalker ve InFrame projelerinde ses tasarımı.</div>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-label" data-tr="02 — Deneyim" data-en="02 — Experience">02 — Deneyim</div>
   <h2 class="section-title" data-tr="KARİYER YOLCULUĞU" data-en="CAREER JOURNEY">KARİYER YOLCULUĞU</h2>
@@ -783,7 +777,6 @@ footer{
   </div>
 </section>
 
-<!-- SOLO PROJECTS -->
 <section id="projects">
   <div class="section-label" data-tr="03 — Bireysel Projeler" data-en="03 — Solo Projects">03 — Bireysel Projeler</div>
   <h2 class="section-title" data-tr="ÖZEL YAPIMLAR" data-en="CUSTOM BUILDS">ÖZEL YAPIMLAR</h2>
@@ -800,21 +793,9 @@ footer{
         <span class="tag" data-tr="Mobil" data-en="Mobile">Mobil</span>
       </div>
     </div>
-    <div class="project-card">
-      <div class="project-type" data-tr="// YZTA Bootcamp Projesi" data-en="// YZTA Bootcamp Project">// YZTA Bootcamp Projesi</div>
-      <div class="project-title">EMULATE AGE</div>
-      <div class="project-desc" data-tr="3D labirent keşfi ve macera oyunu. NavMesh ile labirentte oyuncuyu takip eden ve engel algılayan iskelet AI ajanları. Stratejik kaynak toplama mekaniği ve çıkış hedefine dayalı oyun akışı." data-en="3D maze exploration and adventure game. Skeleton AI agents tracking the player and avoiding obstacles using NavMesh. Strategic resource gathering mechanic and exit-oriented game flow.">3D labirent keşfi ve macera oyunu. NavMesh ile labirentte oyuncuyu takip eden ve engel algılayan iskelet AI ajanları. Stratejik kaynak toplama mekaniği ve çıkış hedefine dayalı oyun akışı.</div>
-      <div class="project-tags">
-        <span class="tag">Unity</span>
-        <span class="tag">NavMesh AI</span>
-        <span class="tag">3D</span>
-        <span class="tag" data-tr="Labirent" data-en="Maze">Labirent</span>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- GAME JAMS -->
 <section id="jams" style="background:var(--bg)">
   <div class="section-label" data-tr="04 — Game Jams" data-en="04 — Game Jams">04 — Game Jams</div>
   <h2 class="section-title" data-tr="JAM ARŞİVİ" data-en="JAM ARCHIVE">JAM ARŞİVİ</h2>
@@ -822,7 +803,6 @@ footer{
   <div class="jams-grid" id="jamsGrid"></div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-label" data-tr="05 — İletişim" data-en="05 — Contact">05 — İletişim</div>
   <div class="contact-inner">
@@ -879,16 +859,14 @@ footer{
   <span>Istanbul, TR</span>
 </footer>
 
-<!-- GAME DETAIL MODAL -->
 <div class="modal-overlay" id="modal">
   <div class="modal-content" id="modalContent"></div>
 </div>
 
 <script>
-// Custom cursor
 const cursor = document.getElementById('cursor');
 document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX - 7 + 'px'; // Adjusted for 125% scale
+  cursor.style.left = e.clientX - 7 + 'px';
   cursor.style.top = e.clientY - 7 + 'px';
 });
 document.querySelectorAll('a,button,.jam-card,.btn').forEach(el => {
@@ -896,16 +874,11 @@ document.querySelectorAll('a,button,.jam-card,.btn').forEach(el => {
   el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
 });
 
-// Localization logic
 let currentLang = 'tr';
 
 function toggleLang() {
   currentLang = currentLang === 'tr' ? 'en' : 'tr';
-  
-  // Buton metnini değiştir (Tıklanabilir hedef dil yazsın)
   document.getElementById('langBtn').innerText = currentLang === 'tr' ? 'EN' : 'TR';
-  
-  // Sabit metinleri ve input/textarea'ları değiştir
   document.querySelectorAll('[data-tr][data-en]').forEach(el => {
     if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
       el.placeholder = el.getAttribute(`data-${currentLang}`);
@@ -913,17 +886,12 @@ function toggleLang() {
       el.innerHTML = el.getAttribute(`data-${currentLang}`);
     }
   });
-  
-  // Jam kartlarını yeniden oluştur
   renderJams();
-  
-  // Eğer modal açıksa içini yeniden İngilizce/Türkçe doldur
   if (document.getElementById('modal').classList.contains('open') && currentOpenJam) {
     openModal(currentOpenJam);
   }
 }
 
-// Game jam data
 const jams = [
   {
     id:'kutahya24',
@@ -935,43 +903,43 @@ const jams = [
     desc_en:'We control a heroic mole who learns on a quiet evening that the world\'s historical artifacts have vanished. Chasing the lost treasures, we embark on an exciting adventure extending from the underground to the surface.',
     roles:['Sound Design','Hikaye','Level Design'],
     roles_en:['Sound Design','Story','Level Design'],
-    team:'Vazos Game Development Team', team_en:'Vazos Game Development Team'
+    team:'Vazos', team_en:'Vazos'
   },
   {
     id:'mau25',
     title:'Mau Jam', title_en:'Mau Jam',
     date:'14 Şubat 2025', date_en: 'Feb 14, 2025',
     rank:2,
-    game:'',
+    game:'gleamspective',
     desc:'Karanlığın hüküm sürdüğü terk edilmiş bir fabrikada, özgürlüğünü arayan küçük bir ışık partikülüyüz. Karmaşık engelleri aşarak fabrikadan kaçmaya ve kendi aydınlığımızı bulmaya çalışıyoruz.',
     desc_en:'We are a small light particle seeking freedom in an abandoned factory ruled by darkness. By overcoming complex obstacles, we try to escape the factory and find our own illumination.',
     roles:['Sound Design','Level Design','Hikaye'],
     roles_en:['Sound Design','Level Design','Story'],
-    team:'Vazos Game Development Team', team_en:'Vazos Game Development Team'
+    team:'Vazos', team_en:'Vazos'
   },
   {
     id:'ggog25',
     title:'GGOG Jam', title_en:'GGOG Jam',
     date:'25 Nisan 2025', date_en: 'Apr 25, 2025',
     rank:3,
-    game:'',
+    game:'Handle\'nt',
     desc:'Deli bir profesörün asistanı olan Nisa\'nın gözünden, kontrolden çıkan bir deneyin içine düşüyoruz. Profesörü ele geçiren mekanik kıyafeti durdurmak ve kaosu bitirmek artık bizim sorumluluğumuzda.',
     desc_en:'Through the eyes of Nisa, assistant to a mad professor, we fall into an experiment gone wrong. It is now our responsibility to stop the mechanical suit that has taken over the professor and end the chaos.',
     roles:['Level Design','Sound Design'],
     roles_en:['Level Design','Sound Design'],
-    team:'Vazos Game Development Team', team_en:'Vazos Game Development Team'
+    team:'Vazos', team_en:'Vazos'
   },
   {
     id:'ulu25',
     title:'Ulu Jam', title_en:'Ulu Jam',
     date:'02 Mayıs 2025', date_en: 'May 02, 2025',
     rank:2,
-    game:'',
+    game:'InFrame',
     desc:'Geçmişin gölgeleriyle yüzleşen bir yetimin, yıllar sonra döndüğü eski evindeki hüzünlü hikayesine tanık oluyoruz. Anıları toplayarak aile trajedisinin arkasındaki gizemi çözmeye çalıştığımız atmosferik bir yapım.',
     desc_en:'We witness the sorrowful story of an orphan facing the shadows of the past, returning to their old home years later. An atmospheric game where we try to solve the mystery behind a family tragedy by collecting memories.',
     roles:['Sound Design','Level Design'],
     roles_en:['Sound Design','Level Design'],
-    team:'Vazos Game Development Team', team_en:'Vazos Game Development Team'
+    team:'Vazos', team_en:'Vazos'
   },
   {
     id:'yzta25',
@@ -990,12 +958,12 @@ const jams = [
     title:'Yıldız Teknik Jam', title_en:'Yildiz Teknik Jam',
     date:'09 Mayıs 2025', date_en: 'May 09, 2025',
     rank:1,
-    game:'',
+    game:'Night Of Sleepwalker',
     desc:'Uyku bozukluğuyla mücadele eden bir beyaz yakalının kabus gibi geçen akşamına konuk oluyoruz. Bilincimizi kaybetmeden önce evdeki potansiyel tehlikeleri ortadan kaldırarak hayatta kalmaya çalışıyoruz.',
     desc_en:'We are guests in the nightmarish evening of a white-collar worker struggling with a sleep disorder. We try to survive by eliminating potential hazards in the house before losing consciousness.',
     roles:['Hikaye','Level Design','Sound Design'],
     roles_en:['Story','Level Design','Sound Design'],
-    team:'Vazos Game Development Team', team_en:'Vazos Game Development Team'
+    team:'Vazos', team_en:'Vazos'
   },
   {
     id:'anku25',
@@ -1007,14 +975,14 @@ const jams = [
     desc_en:'As an axolotl, the absolute ruler of the seas, we defend our throne against rebel fishes. We fight to maintain the authority of our kingdom in this battle deep in the ocean.',
     roles:['Mekanik Geliştirme','Sound Design','UI/UX Tasarım'],
     roles_en:['Mechanics Dev','Sound Design','UI/UX Design'],
-    team:'Vazos Game Development Team', team_en:'Vazos Game Development Team'
+    team:'Vazos', team_en:'Vazos'
   },
   {
     id:'yzta_boot25',
     title:'Bootcamp', title_en:'Bootcamp',
     date:'05 Haziran 2025', date_en: 'Jun 05, 2025',
     rank:0,
-    game:'',
+    game:'Emulate Age',
     desc:'İskeletlerin kol gezdiği karanlık ve tekinsiz bir labirentte altın toplama peşindeyiz. Hem açgözlülüğümüzü dizginleyip hem de peşimizdeki ölümsüzlerden kaçarak çıkış yolunu bulmaya odaklanıyoruz.',
     desc_en:'We are after collecting gold in a dark and eerie maze crawling with skeletons. We focus on finding the exit by curbing our greed and escaping the undead chasing us.',
     roles:['Tüm Geliştirme','Sistem Tasarımı','Mekanik Geliştirme','Level Design','Sound Design','Atmosfer Kurgusu','NavMesh AI','Oyun Döngüsü','AI Entegrasyonu','Algoritma'],
@@ -1026,12 +994,12 @@ const jams = [
     title:'Goat Jam', title_en:'Goat Jam',
     date:'29 Mayıs 2025', date_en: 'May 29, 2025',
     rank:3,
-    game:'',
+    game:'Kapalı Adres',
     desc:'Adres kavramının bulunmadığı sürreal bir evrende kuryelik yapmanın zorluklarını deneyimliyoruz. Sezgilerimizi kullanarak paketleri doğru sahiplerine ulaştırmaya çalıştığımız sıra dışı bir simülasyon.',
     desc_en:'We experience the difficulties of being a courier in a surreal universe where the concept of an address doesn\'t exist. An unusual simulation where we try to deliver packages to their rightful owners using our intuition.',
     roles:['Mekanik Geliştirme','Level Design','Atmosfer Kurgusu','Oyun Döngüsü','Hikaye','Algoritma'],
     roles_en:['Mechanics Dev','Level Design','Atmosphere Creation','Game Loop','Story','Algorithm'],
-    team:'Vazos Game Development Team', team_en:'Vazos Game Development Team'
+    team:'Vazos', team_en:'Vazos'
   },
   {
     id:'magara25',
@@ -1043,31 +1011,31 @@ const jams = [
     desc_en:'It was an experience focused on mingling with the community and social interaction rather than game production. This jam, centered on new friendships and networking, turned into a source of motivation for our team.',
     roles:['Mekanik Geliştirme','UI/UX Tasarım','Sistem Tasarımı','Algoritma'],
     roles_en:['Mechanics Dev','UI/UX Design','System Design','Algorithm'],
-    team:'Vazos Game Development Team', team_en:'Vazos Game Development Team'
+    team:'Vazos', team_en:'Vazos'
   },
   {
     id:'jamination8',
     title:'Jamination', title_en:'Jamination',
     date:'17 Ekim 2025', date_en: 'Oct 17, 2025',
     rank:0,
-    game:'',
+    game:'Taxilepsy',
     desc:'Gece vardiyasında sakin bir mesai beklerken kendini bir banka soygununun ortasında uzmanlaşan taksicinin gerilim dolu hikayesi. Rehin alındığımız bu süreçte polislere yakalanmadan hayatta kalmaya ve suçluları taşımaya çalışıyoruz.',
     desc_en:'The suspenseful story of a taxi driver who finds himself in the middle of a bank robbery while expecting a quiet night shift. Held hostage, we try to survive and transport the criminals without getting caught by the police.',
     roles:['Mekanik Geliştirme','Level Design','Atmosfer Kurgusu','UI/UX Tasarım','Algoritma','Hikaye'],
     roles_en:['Mechanics Dev','Level Design','Atmosphere Creation','UI/UX Design','Algorithm','Story'],
-    team:'Vazos Game Development Team', team_en:'Vazos Game Development Team'
+    team:'Vazos', team_en:'Vazos'
   },
   {
     id:'gng25',
     title:'GNG Jam', title_en:'GNG Jam',
     date:'24 Ekim 2025', date_en: 'Oct 24, 2025',
     rank:0,
-    game:'',
+    game:'Debugged',
     desc:'Bir GameBoy\'un içinde yaşayan gizli bir kahraman olarak, oyuncunun ilerleyebilmesi için gerçek zamanlı seviyeler tasarlıyoruz. Biz içeride yollar inşa ederken, dışarıdaki oyuncunun karakterini hedefe ulaştırmasını sağlıyoruz.',
     desc_en:'As a hidden hero living inside a GameBoy, we design real-time levels for the player to progress. While we build paths inside, we ensure the player outside reaches the goal.',
     roles:['Level Design','Sound Design','Oyun Döngüsü','Hikaye'],
     roles_en:['Level Design','Sound Design','Game Loop','Story'],
-    team:'Vazos Game Development Team', team_en:'Vazos Game Development Team'
+    team:'Vazos', team_en:'Vazos'
   },
   {
     id:'ayaz25',
@@ -1079,19 +1047,19 @@ const jams = [
     desc_en:'An event process where time was dedicated to connecting with the community and developing new collaborations rather than a technical output. Completed with a focus on socializing and expanding the team\'s vision.',
     roles:['Hikaye','Sistem Tasarımı'],
     roles_en:['Story','System Design'],
-    team:'Vazos Game Development Team', team_en:'Vazos Game Development Team'
+    team:'Vazos', team_en:'Vazos'
   },
   {
     id:'ggj26',
     title:'Global Game Jam', title_en:'Global Game Jam',
     date:'30 Ocak 2026', date_en: 'Jan 30, 2026',
     rank:0,
-    game:'',
+    game:'Masked Sins',
     desc:'Herkesin maskeyle doğduğu bir toplumda, sistemin dışında kalan "maskesizler" için kaçak üretim yapıyoruz. Hem otoritenin baskısından kaçıp hem de toplumdan dışlananlara umut olmaya çalıştığımız distopik bir yapım.',
     desc_en:'In a society where everyone is born with a mask, we do illegal production for the "unmasked" who are left outside the system. A dystopian game where we try to escape the authority\'s oppression and be a hope for the outcasts.',
     roles:['Level Design','Oyun Döngüsü','Hikaye','Mekanik Geliştirme'],
     roles_en:['Level Design','Game Loop','Story','Mechanics Dev'],
-    team:'Vazos Game Development Team', team_en:'Vazos Game Development Team'
+    team:'Vazos', team_en:'Vazos'
   },
   {
     id:'ostim26',
@@ -1103,45 +1071,35 @@ const jams = [
     desc_en:'Instead of a hastily finished game, we acted with the vision of a project with solid foundations that will continue to be worked on. The jam process was used to build the core mechanics and future plans of the project.',
     roles:['Tüm Geliştirme','Mekanik Geliştirme','Sistem Tasarımı','Algoritma','NavMesh AI'],
     roles_en:['Full Dev','Mechanics Dev','System Design','Algorithm','NavMesh AI'],
-    team:'Vazos Game Development Team', team_en:'Vazos Game Development Team'
+    team:'Vazos', team_en:'Vazos'
   },
   {
     id:'ulu26',
     title:'Ulujam 2026', title_en:'Ulujam 2026',
     date:'08 Mayıs 2026', date_en: 'May 08, 2026',
     rank:0,
-    game:'',
+    game:'Racoo \'N Roll',
     desc:'Partiye sızmış bir rakunsun ve gözüne kestirdiğin enstrümanları çalmaya çalışıyorsun. Ancak bir sorun var: Müzik durursa davetliler durumu fark eder! Yakalanmamak için enstrümanı kaçırırken aynı zamanda onu çalmaya devam etmelisin.',
     desc_en:'You are a raccoon who has infiltrated a party, trying to steal the instruments you\'ve set your sights on. But there\'s a catch: if the music stops, the guests will notice! To avoid getting caught, you must keep playing the instrument while making your getaway.',
     roles:['Mekanik Geliştirme','Level Design'],
     roles_en:['Mechanics Dev','Level Design'],
-    team:'Vazos Game Development Team', team_en:'Vazos Game Development Team'
+    team:'Vazos', team_en:'Vazos'
   }
 ];
 
 let currentOpenJam = null;
 
-// Render jam cards
 function renderJams() {
   const grid = document.getElementById('jamsGrid');
   grid.innerHTML = '';
-  
   jams.forEach(jam => {
     const card = document.createElement('div');
     let rankClass = jam.rank === 1 ? 'gold' : jam.rank === 2 ? 'silver' : jam.rank === 3 ? 'bronze' : '';
     card.className = 'jam-card ' + (jam.rank > 0 ? 'has-rank ' : '') + rankClass;
-    
-    let rankText = jam.rank > 0 ? 
-      (jam.rank === 1 ? '🥇 1.' : jam.rank === 2 ? '🥈 2.' : '🥉 3.') : 
-      (currentLang === 'tr' ? 'Katılım' : 'Participation');
-      
-    let rankDisplay = jam.rank > 0 
-      ? `<div class="jam-rank">${rankText}</div>`
-      : `<div class="jam-participation">${rankText}</div><br>`;
-      
+    let rankText = jam.rank > 0 ? (jam.rank === 1 ? '🥇 1.' : jam.rank === 2 ? '🥈 2.' : '🥉 3.') : (currentLang === 'tr' ? 'Katılım' : 'Participation');
+    let rankDisplay = jam.rank > 0 ? `<div class="jam-rank">${rankText}</div>` : `<div class="jam-participation">${rankText}</div><br>`;
     const title = currentLang === 'en' && jam.title_en ? jam.title_en : jam.title;
     const date = currentLang === 'en' && jam.date_en ? jam.date_en : jam.date;
-    
     card.innerHTML = `
       ${rankDisplay}
       <div class="jam-title">${title}</div>
@@ -1153,23 +1111,15 @@ function renderJams() {
   });
 }
 
-// Modal
 function openModal(jam) {
   currentOpenJam = jam;
   const modal = document.getElementById('modal');
   const content = document.getElementById('modalContent');
-  
   const rankTextTR = ['KATILIM', '🥇 1. SIRALAMA', '🥈 2. SIRALAMA', '🥉 3. SIRALAMA'];
   const rankTextEN = ['PARTICIPATED', '🥇 1ST PLACE', '🥈 2ND PLACE', '🥉 3RD PLACE'];
   const rankArr = currentLang === 'tr' ? rankTextTR : rankTextEN;
   const rankStr = rankArr[jam.rank || 0];
-
-  let rankBadge = '';
-  if (jam.rank === 1) rankBadge = `<div class="modal-rank-badge medal-gold">${rankStr}</div>`;
-  else if (jam.rank === 2) rankBadge = `<div class="modal-rank-badge medal-silver">${rankStr}</div>`;
-  else if (jam.rank === 3) rankBadge = `<div class="modal-rank-badge medal-bronze">${rankStr}</div>`;
-  else rankBadge = `<div class="modal-rank-badge medal-part">${rankStr}</div>`;
-
+  let rankBadge = jam.rank === 1 ? `<div class="modal-rank-badge medal-gold">${rankStr}</div>` : jam.rank === 2 ? `<div class="modal-rank-badge medal-silver">${rankStr}</div>` : jam.rank === 3 ? `<div class="modal-rank-badge medal-bronze">${rankStr}</div>` : `<div class="modal-rank-badge medal-part">${rankStr}</div>`;
   const tBack = currentLang === 'tr' ? '← Geri Dön' : '← Go Back';
   const tJamLabel = '// Game Jam';
   const tDateLabel = currentLang === 'tr' ? 'Tarih' : 'Date';
@@ -1177,16 +1127,13 @@ function openModal(jam) {
   const tTeamLabel = currentLang === 'tr' ? 'Ekip' : 'Team';
   const tRankLabel = currentLang === 'tr' ? 'Sonuç' : 'Result';
   const tRankVal = currentLang === 'tr' ? `${jam.rank}. Sıralama` : `${jam.rank}${jam.rank===1?'st':jam.rank===2?'nd':jam.rank===3?'rd':''} Place`;
-  
   const tAbout = currentLang === 'tr' ? 'HAKKINDA' : 'ABOUT';
   const tRoles = currentLang === 'tr' ? 'BENİM ROLLERIM' : 'MY ROLES';
-
   const title = currentLang === 'en' && jam.title_en ? jam.title_en : jam.title;
   const date = currentLang === 'en' && jam.date_en ? jam.date_en : jam.date;
   const team = currentLang === 'en' && jam.team_en ? jam.team_en : jam.team;
   const desc = currentLang === 'en' && jam.desc_en ? jam.desc_en : jam.desc;
   const roles = currentLang === 'en' && jam.roles_en ? jam.roles_en : jam.roles;
-
   content.innerHTML = `
     <button class="modal-back" onclick="closeModal()">${tBack}</button>
     ${rankBadge}
@@ -1224,28 +1171,22 @@ document.getElementById('modal').addEventListener('click', function(e){
 });
 document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
 
-// Mail form
 function sendMail() {
   const name = document.getElementById('fname').value;
   const email = document.getElementById('femail').value;
   const subject = document.getElementById('fsubject').value;
   const message = document.getElementById('fmessage').value;
-  
   const alertMsg = currentLang === 'tr' ? 'Lütfen en azından e-posta ve mesaj alanlarını doldur.' : 'Please fill out at least the email and message fields.';
   if(!email || !message){ alert(alertMsg); return; }
-  
   const defaultSubj = currentLang === 'tr' ? `Portfolyo sitesinden mesaj — ${name}` : `Message from portfolio site — ${name}`;
   const mailSubject = encodeURIComponent(subject || defaultSubj);
-  
   const hello = currentLang === 'tr' ? 'Merhaba Efe' : 'Hi Efe';
   const senderLabel = currentLang === 'tr' ? 'Gönderen' : 'Sender';
   const mailLabel = currentLang === 'tr' ? 'E-posta' : 'Email';
-
   const body = encodeURIComponent(`${hello},\n\n${message}\n\n---\n${senderLabel}: ${name}\n${mailLabel}: ${email}`);
   window.location.href = `mailto:efehayri2005@gmail.com?subject=${mailSubject}&body=${body}`;
 }
 
-// Initial render
 renderJams();
 </script>
 </body>
